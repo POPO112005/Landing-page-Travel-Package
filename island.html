@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Island Guide</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
+    <!-- Bootstrap Icons -->
+    <link rel="icon" type="image/x-icon"  href="https://png.pngtree.com/png-clipart/20250115/original/pngtree-airplane-logo-vector-png-image_19677986.png">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+        a.nav-link:hover {
+        color: blue !important;
+      }
+      @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+        body{
+        font-family: "Bebas Neue", sans-serif;
+        font-weight: 400;
+        font-style: normal;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <div class="container-fluid">
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <a class="navbar-brand text-primary" href="#">
+            <i class="bi bi-airplane-engines me-2 "></i>Travel With Popo
+          </a>
+          <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active"  href="index.html">Home</a>
+              </li>
+              <li class="nav-item ">
+                <a class="nav-link active" href="flight.html">Flight</a>
+              </li>
+              <li class="nav-item ">
+                <a class="nav-link active" aria-current="page" href="island.html">Island</a>
+              </li>
+              <li class="nav-item ">
+                <a class="nav-link active" href="hotel.html">Hotels</a>
+              </li>
+              <li class="nav-item ">
+                <a class="nav-link active" href="travel-guides.html">Travel Guides</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" href="#">Travel Tips</a>
+              </li>
+            </ul>
+            
+          </div>
+        </div>
+    </nav>
+
+   
+
+    
+
+    <!-- Featured Islands -->
+    <div class="container py-5" id="islands">
+        <h1 class="text-center mb-5">Featured Islands</h1>
+        <!-- Andaman Sea Islands -->
+        <h3 class="mb-4 mt-5 border-bottom pb-2">Andaman Sea Islands (West Coast)</h3>
+        <div class="row">
+            <div class="col-md-4 mb-4">
+                <div class="card h-100 shadow">
+                    <img src="https://img.kapook.com/u/2018/sutasinee/05/p1_1.jpg" class="card-img-top" alt="Phuket" style="height: 200px; object-fit: cover;">
+                    <div class="card-body">
+                        <h5 class="card-title">เกาะหลีเป๊ะ จ.สตูล</h5>
+                        <p class="card-text " >สวรรค์อันเงียบสงบที่ตั้งอยู่ในน้ำทะเลอันดามันของไทย  เกาะหลีเป๊ะมีชื่อเสียงในด้านชายหาดที่เก่าแก่ แนวปะการังที่มีชีวิตชีวา </p>
+                        <div class="d-flex justify-content-between align-items-center">
+                            <div>
+                                <span class="text-warning">
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-half"></i>
+                                </span>
+                                <span class="ms-1">4.5</span>
+                            </div>
+                            <a href="https://www.satun.go.th/travel_activity/detail/15/data.html" target="_blank" class="btn btn-sm btn-outline-primary">Read More</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-md-4 mb-4">
+                <div class="card h-100 shadow">
+                    <img src="https://images.unsplash.com/photo-1537956965359-7573183d1f57?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1974&q=80" target="_blank" class="card-img-top" alt="Phi Phi Islands" style="height: 200px; object-fit: cover;">
+                    <div class="card-body">
+                        <h5 class="card-title">เกาะพีพี จ.ภูเก็ต</h5>
+                        <p class="card-text " >เกาะที่ใหญ่ที่สุดของประเทศไทย มีชื่อเสียงในเรื่องชายหาดที่สวยงาม ชีวิตกลางคืนที่มีชีวิตชีวา และกิจกรรมต่างๆ มากมาย </p>
+                        <div class="d-flex justify-content-between align-items-center">
+                            <div>
+                                <span class="text-warning">
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                </span>
+                                <span class="ms-1">4.9</span>
+                            </div>
+                            <a href="https://www.ticket2attraction.com/th/blogs/phi-phi-attractions/?srsltid=AfmBOoqQZRdAuJ7eh5ImExTqDV89mYyZ1ixWSXIEpEB-bia8CeJow9rY" target="_blank" class="btn btn-sm btn-outline-primary">Read More</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-md-4 mb-4">
+                <div class="card h-100 shadow">
+                    <img src="https://cms.dmpcdn.com/travel/2023/05/12/94b15880-f06f-11ed-a8ee-9ddcd8eb4dd4_webp_original.jpg" class="card-img-top" alt="Krabi" style="height: 200px; object-fit: cover;">
+                    <div class="card-body">
+                        <h5 class="card-title">เกาะเขาตะปู จ.พังงา</h5>
+                        <p class="card-text">ความโดดเด่นของเขาตะปูก็คือ เป็นแท่งหินขนาดใหญ่ที่โผล่พ้นขึ้นมาจากน้ำทะเล ทำให้มีลักษณะคล้ายกับตะปูขนาดยักษ์ที่ถูกตอกลึกลงไปในน้ำ</p>
+                        <div class="d-flex justify-content-between align-items-center">
+                            <div>
+                                <span class="text-warning">
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star"></i>
+                                </span>
+                                <span class="ms-1">4.2</span>
+                            </div>
+                            <a href="https://phangngalocal.go.th/public/list/data/detail/id/830/menu/1619" target="_blank" class="btn btn-sm btn-outline-primary">Read More</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Additional Andaman Sea Islands -->
+        <div class="row mt-4">
+            <div class="col-md-6 mb-4">
+                <div class="card h-100 shadow">
+                    <img src="https://s.isanook.com/tr/0/rp/r/w850/ya0xa0m1w0/aHR0cHM6Ly9zLmlzYW5vb2suY29tL3RyLzAvdWQvMjgzLzE0MTc5ODkvcy5qcGc=.jpg" class="card-img-top" alt="Koh Lipe" style="height: 200px; object-fit: cover;">
+                    <div class="card-body">
+                        <h5 class="card-title">เกาะสิมิลัน จ.พังงา</h5>
+                        <p class="card-text">สิมิลันเป็นสถานที่ในฝันของใครหลายๆคนที่มาเยือนด้วยเหตุผลหลากหลายประการ บางคนมาเพื่อดูความสวยของน้ำทะเลสีครามกับตาตัวเอง บางคนมาเพื่อพักกายและพักใจหรือบางคนที่มาดำน้ำลึกเพื่อชื่นชมเหล่าสัตว์ใต้ท้องทะเลและปะการังที่ขึ้นชื่อว่าอุดมสมบูรณ์อีกแห่งหนึ่งในโลก นอกการดำน้ำแล้วยังมีกิจกรรมอื่นๆอีกมากมาย</p>
+                        <div class="d-flex justify-content-between align-items-center">
+                            <div>
+                                <span class="text-warning">
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-half"></i>
+                                </span>
+                                <span class="ms-1">4.7</span>
+                            </div>
+                            <a href="https://portal.dnp.go.th/Content/nationalpark?contentId=865" target="_blank" class="btn btn-sm btn-outline-primary">Read More</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-md-6 mb-4">
+                <div class="card h-100 shadow">
+                    <img src="https://www.boat-story.com/wp-content/uploads/2019/02/%E0%B9%80%E0%B8%81%E0%B8%B2%E0%B8%B0%E0%B8%A5%E0%B8%B1%E0%B8%99%E0%B8%95%E0%B8%B2-e1524473689727.jpg" class="card-img-top" alt="Similan Islands" style="height: 200px; object-fit: cover;">
+                    <div class="card-body">
+                        <h5 class="card-title">เกาะลันตา จ.กระบี่</h5>
+                        <p class="card-text">เกาะลันตา อยู่ในทะเลอันดามันในเขตจังหวัดกระบี่ ระหว่างทะเลกระบี่กับทะเลตรัง ห่างจากเขตจังหวัดกระบี่ไปทางทิศใต้ ประมาณ 80 กิโลเมตร ประกอบด้วยเกาะ ขนาดใหญ่ 2 เกาะ คือเกาะลันตาใหญ่ และ เกาะลันตาน้อย มีเกาะเล็กๆ อีกมากมาย เป็นศูนย์กลางความเจริญ และ ศูนย์กลางธุรกิจท่องเที่ยวอยู่ที่เกาะลันตาใหญ่</p>
+                        <div class="d-flex justify-content-between align-items-center">
+                            <div>
+                                <span class="text-warning">
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                </span>
+                                <span class="ms-1">4.9</span>
+                            </div>
+                            <a href="https://krabi.thailocallink.com/travel_top/detail/6" target="_blank" class="btn btn-sm btn-outline-primary">Read More</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Gulf of Thailand Islands -->
+        <h3 class="mb-4 mt-5 border-bottom pb-2">Gulf of Thailand Islands (East Coast)</h3>
+
+        <!-- Gulf of Thailand Islands Carousel -->
+        
+        <!-- Gulf of Thailand Islands Cards -->
+        <div class="row">
+            <div class="col-md-4 mb-4">
+                <div class="card h-100 shadow">
+                    <img src="https://s.isanook.com/tr/0/ud/283/1417963/266022.jpg?ip/crop/w670h402/q80/jpg" class="card-img-top" alt="Koh Samui" style="height: 200px; object-fit: cover;">
+                    <div class="card-body">
+                        <h5 class="card-title">เกาะเสม็ด จ.ระยอง</h5>
+                        <p class="card-text">เกาะเสม็ดตั้งอยู่ใกล้กรุงเทพฯ เป็นที่นิยมของนักท่องเที่ยวที่ต้องการพักผ่อนในช่วงวันหยุดสุดสัปดาห์ มีหาดทรายขาวและน้ำทะเลใส</p>
+                        <div class="d-flex justify-content-between align-items-center">
+                            <div>
+                                <span class="text-warning">
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-half"></i>
+                                </span>
+                                <span class="ms-1">4.6</span>
+                            </div>
+                            <a href="https://www.wongnai.com/attractions/324858py-%E0%B9%80%E0%B8%81%E0%B8%B2%E0%B8%B0%E0%B9%80%E0%B8%AA%E0%B8%A1%E0%B9%87%E0%B8%94" target="_blank" class="btn btn-sm btn-outline-primary">Read More</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-md-4 mb-4">
+                <div class="card h-100 shadow">
+                    <img src="https://img.kapook.com/u/2019/sutasinee/03/k2.jpg" class="card-img-top" alt="Koh Phangan" style="height: 200px; object-fit: cover;">
+                    <div class="card-body">
+                        <h5 class="card-title">เกาะสีชัง จ.ชลบุรี</h5>
+                        <p class="card-text">เกาะเล็ก ๆ ใกล้กรุงเทพฯ ที่เต็มไปด้วยเสน่ห์ทางธรรมชาติและวัฒนธรรม เช่น สะพานอัษฎางค์ ช่องเขาขาด และศาลเจ้าพ่อเขาใหญ่</p>
+                        <div class="d-flex justify-content-between align-items-center">
+                            <div>
+                                <span class="text-warning">
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star"></i>
+                                </span>
+                                <span class="ms-1">4.1</span>
+                            </div>
+                            <a href="https://www.chonburi.go.th/travel/detail/10" target="_blank" class="btn btn-sm btn-outline-primary">Read More</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-md-4 mb-4">
+                <div class="card h-100 shadow">
+                    <img src="https://www.takemetour.com/amazing-thailand-go-local/wp-content/uploads/2018/04/06-Koh-Nang-Yuan-Surat-Thani.jpg" class="card-img-top" alt="Koh Tao" style="height: 200px; object-fit: cover;">
+                    <div class="card-body">
+                        <h5 class="card-title">เกาะสมุย จ.สุราษฎร์ธานี</h5>
+                        <p class="card-text">เกาะที่มีชื่อเสียงระดับโลก ด้วยชายหาดที่สวยงาม เช่น หาดเฉวง หาดละไม และหาดลิปะน้อย รวมถึงสถานที่ท่องเที่ยวอื่น ๆ อย่างวัดพระใหญ่ </p>
+                        <div class="d-flex justify-content-between align-items-center">
+                            <div>
+                                <span class="text-warning">
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-half"></i>
+                                </span>
+                                <span class="ms-1">4.7</span>
+                            </div>
+                            <a href="https://travel.kapook.com/view168243.html" target="_blank" class="btn btn-sm btn-outline-primary">Read More</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Additional Gulf of Thailand Islands -->
+        <div class="row mt-4">
+            <div class="col-md-6 mb-4">
+                <div class="card h-100 shadow">
+                    <img src="https://img.wongnai.com/p/1920x0/2020/08/21/61c3877e32314c4d86ed462d2fb499d7.jpg" class="card-img-top" alt="Koh Lanta" style="height: 180px; object-fit: cover;">
+                    <div class="card-body">
+                        <h5 class="card-title">เกาะล้าน จ.ชลบุรี</h5>
+                        <p class="card-text">เกาะยอดนิยมใกล้กรุงเทพฯ ที่มีหาดทรายขาว น้ำทะเลใส และจุดชมวิวสวยงาม เช่น หาดสังวาลย์ และจุดชมวิวกังหันลม</p>
+                        <div class="d-flex justify-content-between align-items-center">
+                            <div>
+                                <span class="text-warning">
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star"></i>
+                                </span>
+                                <span class="ms-1">4.0</span>
+                            </div>
+                            <a href="https://www.wongnai.com/trips/what-to-do-in-koh-larn" target="_blank" class="btn btn-sm btn-outline-primary">Read More</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-md-6 mb-4"> 
+                <div class="card h-100 shadow">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/b/bb/Koh_Nang_Yuan.jpg" class="card-img-top" alt="Similan Islands" style="height: 180px; object-fit: cover;">
+                    <div class="card-body">
+                        <h5 class="card-title">เกาะพงัน จ.สุราษฎร์ธานี</h5>
+                        <p class="card-text">เป็นเกาะที่มีชื่อเสียงระดับโลกจากงาน Full Moon Party ที่จัดขึ้นทุกคืนพระจันทร์เต็มดวงที่หาดริ้น นอกจากนี้ เกาะพะงันยังมีชายหาดสวยงาม</p>
+                        <div class="d-flex justify-content-between align-items-center">
+                            <div>
+                                <span class="text-warning">
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                </span>
+                                <span class="ms-1">4.9</span>
+                            </div>
+                            <a href="https://thai.tourismthailand.org/Attraction/%E0%B9%80%E0%B8%81%E0%B8%B2%E0%B8%B0%E0%B8%9E%E0%B8%B0%E0%B8%87%E0%B8%B1%E0%B8%99" target="_blank" class="btn btn-sm btn-outline-primary">Read More</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js" integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq" crossorigin="anonymous"></script>
+</body>
+</html>
+

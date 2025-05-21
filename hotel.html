@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hotel Booking</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
+    <!-- Bootstrap Icons -->
+    <link rel="icon" type="image/x-icon"  href="https://png.pngtree.com/png-clipart/20250115/original/pngtree-airplane-logo-vector-png-image_19677986.png">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">    
+    <style>
+        a.nav-link:hover {
+        color: blue !important;
+      }
+      @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+        body{
+        font-family: "Bebas Neue", sans-serif;
+        font-weight: 400;
+        font-style: normal;
+        }
+    </style>
+</head>
+<body class="bg-light">
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <div class="container-fluid">
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <a class="navbar-brand text-primary" href="#">
+            <i class="bi bi-airplane-engines me-2 "></i>Travel With Popo
+          </a>
+          <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active" href="index.html">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" href="flight.html">Flight</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" href="island.html">Island</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="hotel.html">Hotels</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" href="travel-guides.html">Travel Guides</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" href="travel-tips.html">Travel Tips</a>
+              </li>
+            </ul>
+            
+          </div>
+        </div>
+    </nav>
+    <div id="displayhotel" class="mt-3"></div>
+
+    <div class="container py-5">
+        <div class="row">
+            <div class="col-lg-8 mx-auto">
+                <div class="card shadow">
+                    <div class="card-header bg-primary text-white py-3">
+                        <h4 class="mb-0">Find Your Perfect Hotel</h4>
+                    </div>
+
+                    <div class="card-body p-4">
+                        <!-- Stay type and room selection -->
+                        <div class="row mb-4">
+                            <div class="col-12 col-md-4">
+                                <div class="d-flex gap-2">
+                                    
+                                    
+                                    
+                                    <select class="form-select rounded-pill" aria-label="Room type selection" id="roomType">
+                                        <option selected>Standard Room</option>
+                                        <option>Deluxe Room</option>
+                                        <option>Suite</option>
+                                        <option>Villa</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Hotel details -->
+                        <div class="row mb-4">
+                            <div class="col-12 col-lg-12 mb-4">
+                                <div class="d-flex flex-column flex-md-row gap-2 mb-3 mb-md-0">
+                                    <div class="input-group flex-grow-1 shadow-sm rounded">
+                                        <span class="input-group-text bg-white border-end-0">
+                                            <i class="bi bi-geo-alt"></i>
+                                        </span>
+                                        <div class="form-floating flex-grow-1">
+                                            <select class="form-select" aria-label="Destination selection" id="destination">
+                                                <option selected>Select destination</option>
+                                                <option>Phi Phi, Phuket</option>
+                                                <option>Sichang, Chonburi</option>
+                                                <option>Lipa, Satun</option>
+                                                <option>Samui, Surat Thani</option>
+                                                <option>Ko Lan, Chonburi</option>
+                                                <option>Ko Lanta, Krabi</option>
+                                            </select>
+                                            <label for="destination" class="text-muted small">Destination</label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="col-12 col-lg-12">
+                                <div class="d-flex gap-2">
+                                    <div class="input-group shadow-sm rounded">
+                                        <span class="input-group-text bg-white border-end-0">
+                                            <i class="bi bi-calendar"></i>
+                                        </span>
+                                        <div class="form-floating flex-grow-1">
+                                            <input type="date" class="form-control border-start-0" id="checkInDate" placeholder="Check-in">
+                                            <label for="checkInDate" class="text-muted small">Check-in</label>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="input-group shadow-sm rounded" id="checkOutDateContainer">
+                                        <span class="input-group-text bg-white border-end-0">
+                                            <i class="bi bi-calendar"></i>
+                                        </span>
+                                        <div class="form-floating flex-grow-1">
+                                            <input type="date" class="form-control border-start-0" placeholder="Check-out" id="checkOutDate">
+                                            <label for="checkOutDate" class="text-muted small">Check-out</label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Guests and rooms -->
+                        <div class="row mb-4">
+                            <div class="col-12 col-md-12">
+                                <div class="d-flex gap-2">
+                                    <div class="card flex-grow-1 border shadow-sm">
+                                        <div class="card-body py-2 d-flex align-items-center">
+                                            <i class="bi bi-person me-2"></i>
+                                            <input type="number" placeholder="Adults" class="form-control border-0 shadow-none" id="adultCount" min="1" value="2">
+                                        </div>
+                                    </div>
+                                    
+                                    
+                                    
+                                    <div class="card flex-grow-1 border shadow-sm">
+                                        <div class="card-body py-2 d-flex align-items-center">
+                                            <i class="bi bi-house-door me-2"></i>
+                                            <input type="number" placeholder="Rooms" class="form-control border-0 shadow-none" id="roomCount" min="1" value="1">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <!-- Price display -->
+                            <div class="col-12 mt-3">
+                                <div class="card border shadow-sm">
+                                    <div class="card-body py-3">
+                                        <div class="d-flex justify-content-between align-items-center">
+                                            <div>
+                                                <h5 class="mb-0">Total Price</h5>
+                                                <p class="text-muted mb-0 small">Including taxes and fees</p>
+                                            </div>
+                                            <div>
+                                                <h3 class="mb-0 text-primary" id="totalPriceDisplay">฿0</h3>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div>
+                                <h3><span class="badge rounded-pill text-bg-success mt-3" id="payment">Payment</span></h3>
+                            </div>
+                            
+                            <img id="qrcode" class="mb-3 w-25 mx-auto" src="https://www.blognone.com/sites/default/files/externals/255750d05125fccbe1d06e2b2ac1fa23.jpg">
+                            <div class="ms-2" id="slip">
+                                <label for="" class="form-label">Attach slip</label>
+                                <input type="file"  class="form-control w-50 ">
+                            </div>
+                        </div>
+                        
+                        <!-- Search button -->
+                        <div class="row">
+                            <div class="col-12">
+                                <button class="btn btn-primary w-100 py-3 fw-bold" id="bookHotelBtn">Book Hotel</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+   
+    <script>
+    
+  //////////////////////////////////////////////////////////
+  // 🏨 HOTEL BOOKING
+  $(document).ready(function(){
+    $("#qrcode").hide();
+    $("#slip").hide();
+    if ($("#payment").click(function () {
+      $("#qrcode").show();
+      $("#slip").show();
+    }));
+  });
+  $("#bookHotelBtn").click(function () {
+    
+    
+
+    const roomType = $("#roomType").val();
+    const dest = $("#destination").val();
+    const checkIn = $("#checkInDate").val();
+    const checkOut = $("#checkOutDate").val();
+    const guests = $("#adultCount").val();
+    const rooms = $("#roomCount").val();
+    const total = $("#totalPriceDisplay").text();
+
+    let msg = "<div class='alert alert-success'>";
+    msg += "ได้ทำการจองโรงแรม: <span class='text-primary'> "+ roomType + "</span><br>";
+    msg += "ประเภทห้อง: <span class='text-primary'>" + dest + "</span><br>";
+    msg += "วันเช็กอิน: <span class='badge text-bg-light'>" + checkIn + "</span><br>";
+    msg += "วันเช็คเอาท์: <span class='badge text-bg-light'>" + checkOut + "</span><br>";
+    msg += "จำนวนผู้เข้าพัก: <span class='badge text-bg-warning'>" + guests + "</span> คน<br>"; 
+    msg += "จำนวน: <span class='badge text-bg-warning'>" + rooms + "</span> ห้อง<br>";
+    msg += "-------------------------<br>";
+    msg += "ยอดชำระทั้งหมด: <span class='badge text-bg-success'>" + total + "</span><br>"; 
+    msg += "-------------------------<br>";
+    msg += "ท่านได้จองสำเร็จ</div>";
+
+    alert("จองสำเร็จ");
+    $("#displayhotel").html(msg);
+  });
+
+  function calculateHotel() {
+    const dest = $("#destination").val();
+    const roomType = $("#roomType").val();
+    const checkIn = new Date($("#checkInDate").val());
+    const checkOut = new Date($("#checkOutDate").val());
+    const guests = parseInt($("#adultCount").val()) || 1;
+    const rooms = parseInt($("#roomCount").val()) || 1;
+
+    const priceMap = {
+      "Phi Phi, Phuket-Standard Room": 1500,
+      "Phi Phi, Phuket-Deluxe Room": 2200,
+      "Phi Phi, Phuket-Suite": 3000,
+      "Phi Phi, Phuket-Villa": 4000,
+      "Sichang, Chonburi-Standard Room": 1200,
+      "Sichang, Chonburi-Deluxe Room": 1900,
+      "Sichang, Chonburi-Suite": 2500,
+      "Sichang, Chonburi-Villa": 3500,
+      "Lipa, Satun-Standard Room": 1000,
+      "Lipa, Satun-Deluxe Room": 1700,
+      "Lipa, Satun-Suite": 2300,
+      "Lipa, Satun-Villa": 3000,
+      "Samui, Surat Thani-Standard Room": 2000,
+      "Samui, Surat Thani-Deluxe Room": 2700,
+      "Samui, Surat Thani-Suite": 3500,
+      "Samui, Surat Thani-Villa": 4500,
+      "Ko Lan, Chonburi-Standard Room": 1300,
+      "Ko Lan, Chonburi-Deluxe Room": 1800,
+      "Ko Lan, Chonburi-Suite": 2500,
+      "Ko Lan, Chonburi-Villa": 3500,
+      "Ko Lanta, Krabi-Standard Room": 1600,
+      "Ko Lanta, Krabi-Deluxe Room": 2400,
+      "Ko Lanta, Krabi-Suite": 3200,
+      "Ko Lanta, Krabi-Villa": 4200
+    };
+
+    const key = `${dest}-${roomType}`;
+    const price = priceMap[key] || 0;
+    const nights = Math.floor((checkOut - checkIn) / (1000 * 60 * 60 * 24));
+
+    if (nights <= 0 || price === 0) {
+      $("#totalPriceDisplay").text("฿0");
+      return;
+    }
+
+    const total = price * nights * rooms;
+    $("#totalPriceDisplay").text("฿" + total.toLocaleString());
+  }
+
+  ["destination", "roomType", "checkInDate", "checkOutDate", "adultCount", "roomCount"].forEach((id) => {
+    document.getElementById(id).addEventListener("change", calculateHotel);
+  });
+
+
+    </script>
+    <!-- Bootstrap JS Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js" integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq" crossorigin="anonymous"></script>
+</body>
+</html>

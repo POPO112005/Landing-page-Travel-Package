@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flight Booking</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
+    <!-- Bootstrap Icons -->
+    <link rel="icon" type="image/x-icon"  href="https://png.pngtree.com/png-clipart/20250115/original/pngtree-airplane-logo-vector-png-image_19677986.png">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">    
+    <style>
+       a.nav-link:hover {
+        color: blue !important;
+      }
+      @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+        body{
+        font-family: "Bebas Neue", sans-serif;
+        font-weight: 400;
+        font-style: normal;
+        }
+    </style>
+</head>
+<body class="bg-light">
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <div class="container-fluid">
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <a class="navbar-brand text-primary" href="#">
+            <i class="bi bi-airplane-engines me-2 "></i>Travel With Popo
+          </a>
+          <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" href="flight.html">Flight</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" href="island.html">Island</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" href="hotel.html">Hotels</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" href="travel-guides.html">Travel Guides</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" href="travel-tips.html">Travel Tips</a>
+              </li>
+            </ul>
+            
+          </div>
+        </div>
+      </nav>
+    <div class="container py-5">
+        <div class="card shadow">
+            <div class="card-body p-4">
+                <!-- Trip type and class selection -->
+                <p id="display"></p>
+                <form id="flightBookingForm" class="needs-validation" novalidate>
+                    <div class="row mb-4">
+                        <div class="col-12 col-md-6">
+                            <div class="d-flex gap-2">
+                                <select class="form-select rounded-pill" aria-label="Trip type selection" id="tripType" required>
+                                    <option selected value="round-trip">Round-trip</option>
+                                    <option value="oneway">One-way</option>
+                                </select>
+                                
+                                <select class="form-select rounded-pill" aria-label="Class selection" id="flightClass" required>
+                                    <option selected>Economy</option>
+                                    <option>Premium Economy</option>
+                                    <option>Business</option>
+                                    <option>First Class</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Flight details -->
+                    <div class="row mb-4">
+                        <div class="col-12 col-lg-12 mb-4">
+                            <div class="d-flex flex-column flex-md-row gap-2 mb-3 mb-md-0">
+                                <div class="input-group flex-grow-1 shadow-sm rounded">
+                                    <span class="input-group-text bg-white border-end-0">
+                                        <i class="bi bi-airplane-engines"></i>
+                                    </span>
+                                    <div class="form-floating flex-grow-1">
+                                        <select class="form-select" aria-label="Departure location" id="departureLocation" required>
+                                            <option value="">Flying from</option>
+                                            <option>Krabi, Thailand</option>
+                                            <option>Surat Thani, Thailand</option>
+                                            <option>Phuket, Thailand</option>
+                                            <option>Pattaya, Thailand</option>
+                                            <option>Satun, Thailand</option>
+                                            <option>Trang, Thailand</option>
+                                        </select>
+                                        <label for="departureLocation" class="text-muted small">airport name</label>
+                                        <div class="invalid-feedback">
+                                            Please select a departure location.
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- Swap button -->
+                                <div class="d-flex align-items-center justify-content-center">
+                                    <button type="button" class="btn btn-light rounded-circle border" id="swapLocations">
+                                        <i class="bi bi-arrow-left-right"></i>
+                                    </button>
+                                </div>
+                                
+                                <div class="input-group flex-grow-1 shadow-sm rounded">
+                                    <span class="input-group-text bg-white border-end-0">
+                                        <i class="bi bi-geo-alt"></i>
+                                    </span>
+                                    <div class="form-floating flex-grow-1">
+                                        <select class="form-select" aria-label="Arrival location" id="arrivalLocation" required>
+                                            <option value="">Flying to</option>
+                                            <option>Krabi, Thailand</option>
+                                            <option>Surat Thani, Thailand</option>
+                                            <option>Phuket, Thailand</option>
+                                            <option>Pattaya, Thailand</option>
+                                            <option>Satun, Thailand</option>
+                                            <option>Trang, Thailand</option>
+                                        </select>
+                                        <label for="arrivalLocation" class="text-muted small">airport name</label>
+                                        <div class="invalid-feedback">
+                                            Please select an arrival location.
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="col-12 col-lg-12">
+                            <div class="d-flex gap-2">
+                                <div class="input-group shadow-sm rounded">
+                                    <span class="input-group-text bg-white border-end-0">
+                                        <i class="bi bi-calendar"></i>
+                                    </span>
+                                    <div class="form-floating flex-grow-1">
+                                        <input type="date" class="form-control border-start-0" id="departureDate" placeholder="Departure" required>
+                                        <label for="departureDate" class="text-muted small">Departure</label>
+                                        <div class="invalid-feedback">
+                                            Please select a departure date.
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="input-group shadow-sm rounded" id="returnDateContainer">
+                                    <span class="input-group-text bg-white border-end-0">
+                                        <i class="bi bi-calendar"></i>
+                                    </span>
+                                    <div class="form-floating flex-grow-1">
+                                        <input type="date" class="form-control border-start-0" placeholder="Return" id="returnDate" required>
+                                        <label for="returnDate" class="text-muted small">Return</label>
+                                        <div class="invalid-feedback">
+                                            Please select a return date.
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Passengers and room -->
+                    <div class="row mb-4">
+                        <div class="col-12 col-md-12">
+                            <div class="d-flex gap-2">
+                                <div class="card flex-grow-1 border shadow-sm">
+                                    <div class="card-body py-2 d-flex align-items-center">
+                                        <i class="bi bi-person me-2"></i>
+                                        <input type="number" placeholder="Passengers" class="form-control border-0 shadow-none" id="passengerCount" min="1" max="9" value="1" required>
+                                    
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- After the passenger count input -->
+                        <div class="col-12 mt-3">
+                            <div class="card border shadow-sm">
+                                <div class="card-body py-3">
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <div>
+                                            <h5 class="mb-0">Total Price</h5>
+                                            <p class="text-muted mb-0 small">Including taxes and fees</p>
+                                        </div>
+                                        <div>
+                                            <h3 class="mb-0 text-primary" id="totalPriceDisplay">฿0</h3>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div>
+                            <h3><span class="badge rounded-pill text-bg-success mt-3" id="payment">Payment</span></h3>
+                        </div>
+                        
+                        <img id="qrcode" class="mb-3 w-25 mx-auto" src="https://www.blognone.com/sites/default/files/externals/255750d05125fccbe1d06e2b2ac1fa23.jpg">
+                        <div class="ms-2" id="slip">
+                            <label for="" class="form-label">Attach slip</label>
+                            <input type="file"  class="form-control w-50 ">
+                        </div>
+                    </div>
+                    
+                    <!-- Search button -->
+                    <div class="row">
+                        <div class="col-12">
+                            <button type="button" class="btn btn-primary w-100 py-3 fw-bold" id="bookFlightBtn">Book</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script src="main.js"></script>
+    <!-- Bootstrap JS Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js" integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq" crossorigin="anonymous"></script>
+    
+</body>
+</html>
